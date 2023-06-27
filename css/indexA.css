@@ -1,0 +1,130 @@
+@media screen and (min-width: 1000px) {
+    body {
+      margin-bottom: 4rem;
+    }
+  }
+h2 {
+    font-size: 2em;/* tamaño de la letra */
+    text-align: center;/* alineacion del texto */
+
+}
+.cuadro{
+    width: 80%;
+}
+.cards {
+    display: grid;
+    grid-gap: 0.5rem 11.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+} 
+.cards>* {
+    display: block;
+    text-decoration: none;
+    color: #1C1B1F;
+    overflow: hidden;
+}
+.cards>*:hover {
+    background-color: #99999966;
+}
+.cards a:active {
+    background-color: #999999dd;
+}
+.cards>*>*{
+    display: block;
+}
+
+.cards figure{
+    position: relative;/*Posicion sobre la superficie*/
+    height: 15rem;/*Altura en rem*/
+    width: 20rem;/*Ancho en rem*/
+    overflow: hidden;/*Define lo que se muestra*/
+    border-radius: 6px;/*Redondeado de las puntas del cuadro*/
+    box-shadow: 0px 15px 25px #adc6db;/*sombreado medidas y color*/
+    cursor: pointer;/*cambia figura del cursor*/
+}
+@media screen and (max-width: 1000px) {
+    .cards figure {
+        height: 13rem;/*Altura en pixeles*/
+        width: 16rem;/*Ancho en pixeles*/
+    }
+}
+@media screen and (max-width: 600px) {
+    .cards figure {
+        height: 11rem;/*Altura en pixeles*/
+        width: 13rem;/*Ancho en pixeles*/
+    }
+}
+@media screen and (max-width: 300px) {
+    .cards figure {
+        height: 9rem;/*Altura en pixeles*/
+        width: 11rem;/*Ancho en pixeles*/
+    }
+}
+.cards figure .capa{
+    position: absolute;/*Posicion sobre la superficie*/
+    top: 0;/*Desplazamiento del borde superior*/
+    width: 100%;/*Ancho*/
+    height: 100%;/*Alto*/
+    transition: all 500ms ease-out;/*animacion al pasar el cursor*/
+    opacity: 0;/*Para solo mostrar la capa al pasar cursor*/
+    visibility: hidden;/*Que no se vea*/
+    text-align: center;/*alineacion del texto*/
+}
+.cards figure:hover > .capa{
+    opacity: 85%;/*Mostrar la capa*/
+    visibility: visible;/*Que se vea*/
+    background: #43464D;/*Color fondo*/
+}
+.cards figure:hover > .capa h3{
+    margin-top: 60px;/*deslizamiento hacia bajo del titulo h3*/
+    margin-bottom: 15px;/*baje tambien texto*/
+}
+@media screen and (max-width: 1000px) {
+    .cards figure:hover > .capa h3 {
+        margin-top: 0.8rem;/*deslizamiento hacia bajo del titulo h3*/
+        margin-bottom: 0.4rem;/*baje tambien texto*/
+    }
+}
+@media screen and (max-width: 1000px) {
+    .cards figure:hover > .capa h3 {
+        margin-top: 0.9rem;/*deslizamiento hacia bajo del titulo h3*/
+        margin-bottom: 0.1rem;/*baje tambien texto*/
+    }
+}
+.cards figure img{
+    width: 100%;/*Ancho*/
+    height: 100%;/*Alto*/
+    transition: all 500ms ease-out;/*animacion al pasar el cursor*/
+}
+.cards figure:hover > img{
+    transform: scale(1.2);/**/
+}
+.cards figure .capa h3{
+    color: #ffffff;/*color letras*/
+    font-weight: 400px;/*sombreado de letras*/
+    margin-bottom: 120px;/**/
+    transition: all 500ms ease-out;/*muestra efecto*/
+    margin-top: 20px;/*deslizamiento hacia bajo del titulo h3*/
+}
+.img-usu {
+    height: 60px;/*Altura en pixeles*/
+    width: 60px;/*Ancho en pixeles*/
+}
+
+@media screen and (max-width: 1000px) {
+    .img-usu {
+        height: 60px;/*Altura en pixeles*/
+        width: 60px;/*Ancho en pixeles*/
+    }
+}
+@media screen and (max-width: 600px) {
+    .img-usu {
+        height: 60px;/*Altura en pixeles*/
+        width: 60px;/*Ancho en pixeles*/
+    }
+}
+@media screen and (max-width: 300px) {
+    .img-usu {
+        height:  60px;/*Altura en pixeles*/
+        width:  60px;/*Ancho en pixeles*/
+    }
+}
